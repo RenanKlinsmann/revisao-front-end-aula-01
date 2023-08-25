@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<button onclick="consoleVariavel()">Constantes e Variaveis</button>
+<button onclick="consoleFuncaoObject()">Funcao Object</button>
+<button onclick="nomeValor()">Nome Valor</button>
+<body>
+    
+</body>
+<script>
+    function consoleVariavel(){
+        var a = 10;
+        let b = 15;
+        const c = 20;
+
+        var a = 5;
+        b = 10;
+
+        console.log(a, b, c);
+    }
+
+    function consoleFuncaoObject(){
+        console.log(typeof Object);
+        console.log(typeof new Object);
+
+        const Cliente = function(){};
+        console.log(typeof Cliente);
+        console.log(typeof new Cliente);
+
+        class Produto  {
+            constructor(nome, preco){
+                this.nome = nome;
+                this.preco = preco;
+            }
+            
+        };
+        const produtoC = new Produto('computador', 5000);
+
+        console.log(typeof produtoC)
+        console.log(typeof Produto);
+        console.log(typeof  new Produto);
+    }
+
+    function nomeValor(){
+
+        const saudacao = 'Ola'; 
+
+        function exec(){
+            const saudacao = 'Fala Boy';
+            return saudacao;
+
+        }
+
+        const cliente = {
+            nome: 'Renan',
+            idade: 28,
+            peso: 90,
+            endereco: {
+                logradouro: 'Rua Bessa',
+                numero: 123,
+                nome: 'Klinsmann'
+            }
+
+        }
+
+        console.log(saudacao);
+        console.log(exec());
+        console.log(cliente);
+
+        if(preco < 40) {
+            return "Livro Barato"
+        } else {
+            return "Livro caro"
+        }
+
+        let resultado = preco < 40 ? "Livro Barato" : "Livro caro";
+
+        let preco = 50;
+        preco < 40
+            ? console.log("Livro Barato")
+            : preco < 70
+            ? console.log("Livro não e barato e nem caro!")
+            : console.log("Livro caro");
+
+            function saudacao(){
+                return "Olá Aluno"
+            }
+
+            console.log(saudacao()); //Olá Aluno
+
+            let saudacao = () => "Olá Aluno";
+
+            console.log(saudacao()); //Olá Aluno
+
+            const livross1 = ["CCS3", "JavaScript", "PHP"];
+            const livross2 = ["HTML5", "React"];
+            const precos = [70, 30, 90, 100, 10];
+
+            let livross = [livros1] + [livros2];
+
+            ["CSS3","JavaScript","PHP", "HTML5","React"] 
+
+            let livrosss = [...livros1, ...livros2];
+
+            let precoMaximo = Math.max(...precos);
+
+            const livrossss = ["CSS3", "HTML5", "JavaScript", "React", "PHP"];
+            let livros1s  = livros.map((livro) => "Livro" + livro);
+            let livros2s  = livros.map((livro, index) => "Livro" + index + " " + livro);
+
+            console.log(livros);
+            console.log(livros1);
+            console.log(livros2);
+
+            const livrosA = [
+                {titulo: "Construindo Sites com HTML", autor: "Mauricio Samy Silva"},
+                {titulo: "Web Scraping com Python", autor: "Ryan Mitchell"},
+                {titulo: "CSS3", autor: "Mauricio Samy Silva"}
+            ];
+            let livrosX = livrosA.map((livro) => "Livro: " + livro.titulo);
+            let livrosY = livrosA.map((livro) => "Autor: " + livro.autor);
+            console.log(livrosA);
+            console.log(livrosX);
+            console.log(livrosY);
+
+            const livrosssss = [
+                {titulo: "Construindo Sites com HTML", autor: "Mauricio Samy Silva"},
+                {titulo: "Web Scraping com Python", autor: "Ryan Mitchell"},
+                {titulo: "CSS3", autor: "Mauricio Samy Silva"}
+            ];
+
+            let livros1ss = livros.filter((livro) => livro.titulo === "CSS3");
+            let livros2 = livros.filter((livro) => livro.autor === "Mauricio Samy Silva");
+            let livros3 = livros.filter((livro) => livro.titulo.includes("com"));
+            console.log(livros1);
+            console.log(livros2);
+            console.log(livros3);
+
+            const livrossssss = [
+                {id: 1, titulo: "Construindo Sites com HTML"},
+                {id: 2, titulo: "Web Scraping com Python"},
+                {id: 3, titulo: "CSS3"}
+            ];
+
+            let livros1 = livros.find((livro) => livro.id === 3);
+            console.log(livros1); //{id: 3, titulo: "CSS3"}
+            console.log(livros1.titulo); //CSS3
+
+
+            const livro = ["CSS3", "HTML5", "JavaScript", "React"];
+            console.log(livros[0]); //CSS3
+            console.log(livros[3]); //React
+
+            const livr = ["CSS3", "HTML5", "JavaScript", "React"];
+            let [css, html5, js, react] = livros;
+            console.log(css); //CSS3
+            console.log(react); //React
+
+            const livros = [
+                {titulo: "React", autor: "Mauricio Samy Silva"},
+                {titulo: "Node Essencial", autor: "MRicardo R. Lecheta"},
+                {titulo: "UX Design", autor: "Will Grant"}
+            ];
+
+            let [lUm, lDois, lTres] = livros;
+            console.log(lUm.titulo); //React
+            console.log(lTres.autor); //Will Grant
+
+            console.log(livros[0].titulo); //React
+            console.log(livros[2].autor); //Will Grant
+    }
+</script>
+</html>
